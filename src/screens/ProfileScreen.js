@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
@@ -287,11 +288,25 @@ export default function ProfileScreen() {
             </TouchableOpacity>
         </View>
       </ScrollView>
+=======
+import { Image, StyleSheet, Text, View } from 'react-native';
+
+export default function ProfileScreen() {
+  return (
+    <View style={styles.container}>
+      <Image
+        source={require('../../assets/icons/user.png')}
+        style={styles.avatar}
+      />
+      <Text style={styles.name}>Anisa FM</Text>
+      <Text style={styles.email}>anisa@example.com</Text>
+>>>>>>> 7a583ac31ac58968d7242c78c46c9229ddca3a84
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+<<<<<<< HEAD
   container: { flex: 1, backgroundColor: "#F5F5F5" },
   header: { backgroundColor: "#2E7D32", padding: 20 },
   headerTop: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 9 },
@@ -320,3 +335,10 @@ const styles = StyleSheet.create({
   logoutButton: { backgroundColor: "#FFEBEE", flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingVertical: 15, borderRadius: 12, borderWidth: 1, borderColor: "#D32F2F", marginTop: 10 },
   logoutText: { color: "#D32F2F", fontWeight: "bold", fontSize: 16, marginLeft: 10 },
 });
+=======
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FAFAFA' },
+  avatar: { width: 80, height: 80, marginBottom: 15, tintColor: '#2E7D32' },
+  name: { fontSize: 18, fontWeight: 'bold', color: '#2E7D32' },
+  email: { fontSize: 14, color: '#555' },
+});
+>>>>>>> 7a583ac31ac58968d7242c78c46c9229ddca3a84

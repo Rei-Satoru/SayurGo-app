@@ -13,5 +13,9 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
+<<<<<<< HEAD
 , "src/screens/DetailUlasanScreen.js"  ]
+=======
+  ]
+>>>>>>> 7a583ac31ac58968d7242c78c46c9229ddca3a84
 }

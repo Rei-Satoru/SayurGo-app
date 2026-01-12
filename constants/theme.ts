@@ -3,7 +3,11 @@
  * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
  */
 
+<<<<<<< HEAD
 import { Platform, StyleSheet } from 'react-native';
+=======
+import { Platform } from 'react-native';
+>>>>>>> 7a583ac31ac58968d7242c78c46c9229ddca3a84
 
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
@@ -51,6 +55,7 @@ export const Fonts = Platform.select({
     mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
 });
+<<<<<<< HEAD
 /* ===== STYLE ===== */
 export const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F3F4F6' },
@@ -184,3 +189,5 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
+=======
+>>>>>>> 7a583ac31ac58968d7242c78c46c9229ddca3a84
