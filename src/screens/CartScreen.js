@@ -1,24 +1,23 @@
-<<<<<<< HEAD
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter, useFocusEffect } from "expo-router";
-import React, { useState, useContext, useCallback } from "react";
+import { useFocusEffect, useRouter } from "expo-router";
+import React, { useCallback, useContext, useState } from "react";
 import {
+  ActivityIndicator,
   FlatList,
   Image,
   Switch,
   Text,
   TouchableOpacity,
   View,
-  ActivityIndicator,
 } from "react-native";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchCart } from "../features/entries/cartSlice";
 
 import CartItem from "../component/CartItem";
-import { useUpdateCartItem } from "../hooks/useUpdateCartItem";
-import { useRemoveFromCart } from "../hooks/useRemoveFromCart";
 import { PromoContext } from "../context/PromoContext";
+import { useRemoveFromCart } from "../hooks/useRemoveFromCart";
+import { useUpdateCartItem } from "../hooks/useUpdateCartItem";
 
 import styles from "../styles/cartStyles";
 
@@ -324,12 +323,9 @@ export default function CartScreen() {
     </View>
   );
 }
-=======
-import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
-import React, { useContext, useState } from 'react';
-import { FlatList, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import CartItem from '../component/CartItem';
+
+import React from 'react';
+import { ScrollView, StyleSheet } from 'react-native';
 import { CartContext } from '../context/CartContext';
 
 export default function CartScreen() {
@@ -640,4 +636,3 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
 });
->>>>>>> 7a583ac31ac58968d7242c78c46c9229ddca3a84
