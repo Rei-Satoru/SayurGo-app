@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import React, { useContext } from "react";
@@ -7,7 +6,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 // 1. IMPORT REDUX TOOLS
 import { useDispatch } from "react-redux";
 // Pastikan path ini sesuai dengan lokasi file slice kamu
-import { addToCartApi } from "../features/entries/cartSlice"; 
+import { addToCartApi } from "../features/entries/cartSlice";
 
 // HAPUS CartContext (Sudah tidak dipakai)
 // import { CartContext } from "../context/CartContext";
@@ -15,7 +14,7 @@ import { addToCartApi } from "../features/entries/cartSlice";
 // FavoriteContext tetap dipakai (karena Provider-nya masih ada di _layout)
 import { FavoriteContext } from "../context/FavoriteContext";
 
-import styles from "../styles/productCardStyles";
+import styles from "../styles/ProductCardStyles";
 
 // 👇 TERIMA PROP 'onAddToCart' DISINI
 export default function ProductCard({ item, compact = false, onAddToCart }) {
@@ -170,36 +169,4 @@ export default function ProductCard({ item, compact = false, onAddToCart }) {
     </TouchableOpacity>
   );
 }
-=======
-import React, { useContext } from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
-import { CartContext } from '../context/CartContext';
-import styles from '../styles/ProductCardStyles';
 
-export default function ProductCard({ item, onAddToCart }) {
-  const { addToCart } = useContext(CartContext);
-
-  const handleAddToCart = () => {
-    addToCart(item);
-    if (onAddToCart) {
-      onAddToCart(item);
-    }
-  };
-
-  return (
-    <View style={styles.card}>
-      <Image source={item.image} style={styles.image} />
-
-      <Text style={styles.category}>{item.jenis}</Text>
-      <Text style={styles.name}>{item.nama}</Text>
-      <Text style={styles.weight}>{item.berat}</Text>
-
-      <Text style={styles.price}>Rp{item.harga.toLocaleString()}</Text>
-
-      <TouchableOpacity style={styles.button} onPress={handleAddToCart}>
-        <Text style={styles.btnText}>Tambah</Text>
-      </TouchableOpacity>
-    </View>
-  );
-}
->>>>>>> 7a583ac31ac58968d7242c78c46c9229ddca3a84

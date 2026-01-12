@@ -6,5 +6,20 @@ export default function LaukRoute() {
 }
 
 export const options = {
-  headerShown: false,
+  headerShown: true,
+  headerTitle: 'Lauk',
+  headerTintColor: '#2E7D32',
+  headerStyle: {
+    backgroundColor: '#2E7D32',
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 3,
+    elevation: 3,
+  },
+  headerTitleStyle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#ffffff',
+  },
 };

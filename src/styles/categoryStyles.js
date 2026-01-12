@@ -1,3 +1,6 @@
+import { StyleSheet } from 'react-native';
+import colors from './colors';
+
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
@@ -33,3 +36,5 @@ const styles = StyleSheet.create({
     paddingBottom: 120, 
   },
 });
+
+export default styles;

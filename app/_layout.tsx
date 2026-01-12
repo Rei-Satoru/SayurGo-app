@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
+    DarkTheme,
+    DefaultTheme,
+    ThemeProvider,
 } from "@react-navigation/native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -118,38 +117,5 @@ export default function RootLayout() {
         </PersistGate>
       </Provider>
     </SafeAreaProvider>
-=======
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/use-color-scheme';
-import { CartProvider } from '@/src/context/CartContext';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
-  return (
-    <CartProvider>
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack screenOptions={{ headerShown: false }}>
-          {/* Tabs utama */}
-          <Stack.Screen name="(tabs)" />
-
-          {/* Modal */}
-          <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-
-          {/* === ROUTE KERANJANG === */}
-          <Stack.Screen name="cart" />
-        </Stack>
-        <StatusBar style="auto" />
-      </ThemeProvider>
-    </CartProvider>
->>>>>>> 7a583ac31ac58968d7242c78c46c9229ddca3a84
   );
 }
